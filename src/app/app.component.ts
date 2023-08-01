@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
-import {PhotoService} from "./service/photoservice";
-import {NodeService} from "./service/nodeservice";
 import {MenuItem, MessageService} from "primeng/api";
 import {TerminalService} from "primeng/terminal";
 import {Subscription} from "rxjs";
-declare global {
-  interface Window {
-    Telegram: any;
-  }
-}
+import {UseTgService} from "./service/use-tg.service";
+
 //const tg = window.Telegram.WebApp;
 @Component({
   selector: 'app-root',
@@ -17,12 +12,7 @@ declare global {
   providers: [MessageService, TerminalService]
 })
 export class AppComponent {
-  tg = window.Telegram.WebApp;
 
-  ngOnInit() {
-
-  }
-  onClose() {
-    this.tg.close();
+  constructor(public tg: UseTgService) {
   }
 }

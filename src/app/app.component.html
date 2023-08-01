@@ -1,8 +1,9 @@
 <p-toolbar>
   <div class="p-toolbar-group-start">
-    <span>{{tg.initDataUnsafe?.user?.username}}</span>
+    <span>{{tg.user?.username}}</span>
   </div>
   <div class="p-toolbar-group-end">
-    <p-button label="Close" (onClick)="onClose()"></p-button>
+    <p-button label="Close" (onClick)="tg.close()"></p-button>
   </div>
 </p-toolbar>
+<p-button label="toggle" (onClick)="tg.onToggleBtn()"></p-button>

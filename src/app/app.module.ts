@@ -10,8 +10,6 @@ import {ToastModule} from "primeng/toast";
 import {DockModule} from "primeng/dock";
 import {TreeModule} from "primeng/tree";
 import {MenubarModule} from "primeng/menubar";
-import {PhotoService} from "./service/photoservice";
-import {NodeService} from "./service/nodeservice";
 import {ButtonModule} from "primeng/button";
 import {ToolbarModule} from "primeng/toolbar";
 
@@ -32,7 +30,7 @@ import {ToolbarModule} from "primeng/toolbar";
     ButtonModule,
     ToolbarModule
   ],
-  providers: [ PhotoService, NodeService ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

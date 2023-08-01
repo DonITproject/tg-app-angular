@@ -3,6 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {TerminalModule} from "primeng/terminal";
+import {GalleriaModule} from "primeng/galleria";
+import {DialogModule} from "primeng/dialog";
+import {ToastModule} from "primeng/toast";
+import {DockModule} from "primeng/dock";
+import {TreeModule} from "primeng/tree";
+import {MenubarModule} from "primeng/menubar";
+import {PhotoService} from "./service/photoservice";
+import {NodeService} from "./service/nodeservice";
 
 @NgModule({
   declarations: [
@@ -10,9 +19,16 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TerminalModule,
+    GalleriaModule,
+    DialogModule,
+    ToastModule,
+    DockModule,
+    TreeModule,
+    MenubarModule
   ],
-  providers: [],
+  providers: [ PhotoService, NodeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

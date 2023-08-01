@@ -4,12 +4,12 @@ import {NodeService} from "./service/nodeservice";
 import {MenuItem, MessageService} from "primeng/api";
 import {TerminalService} from "primeng/terminal";
 import {Subscription} from "rxjs";
-import {Telegram} from "@twa-dev/types"
 declare global {
   interface Window {
-    Telegram: Telegram;
+    Telegram: any;
   }
 }
+const tg = window.Telegram.WebApp;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,6 +20,6 @@ export class AppComponent {
   text: string = 'Close'
   onClose() {
     this.text = 'Close1';
-    window.Telegram.WebApp.close();
+    tg.close();
   }
 }

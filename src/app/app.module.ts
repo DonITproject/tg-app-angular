@@ -12,22 +12,24 @@ import {TreeModule} from "primeng/tree";
 import {MenubarModule} from "primeng/menubar";
 import {PhotoService} from "./service/photoservice";
 import {NodeService} from "./service/nodeservice";
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    TerminalModule,
-    GalleriaModule,
-    DialogModule,
-    ToastModule,
-    DockModule,
-    TreeModule,
-    MenubarModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        TerminalModule,
+        GalleriaModule,
+        DialogModule,
+        ToastModule,
+        DockModule,
+        TreeModule,
+        MenubarModule,
+        ButtonModule
+    ],
   providers: [ PhotoService, NodeService ],
   bootstrap: [AppComponent]
 })

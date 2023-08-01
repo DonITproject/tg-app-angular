@@ -9,7 +9,7 @@ declare global {
     Telegram: any;
   }
 }
-const tg = window.Telegram.WebApp;
+//const tg = window.Telegram.WebApp;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,9 +17,12 @@ const tg = window.Telegram.WebApp;
   providers: [MessageService, TerminalService]
 })
 export class AppComponent {
-  text: string = 'Close'
+  tg = window.Telegram.WebApp;
+
+  ngOnInit() {
+
+  }
   onClose() {
-    this.text = 'Close1';
-    tg.close();
+    this.tg.close();
   }
 }
